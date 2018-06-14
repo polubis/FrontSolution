@@ -7,10 +7,13 @@ import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import { Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // react-deftool
+import 'font-awesome/css/font-awesome.min.css';
+
+import TestReducer from './store/reducers';
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose; // react-devtool
 
 const rootReducer = combineReducers({
-   // here will be reducers soon
+  TestReducer: TestReducer
 }); 
 
 
